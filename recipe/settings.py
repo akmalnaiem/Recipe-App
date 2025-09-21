@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cyl@=cj2lk925glywm9b&)_wv8&ch5s$ba!4h$yrv(qwz!raa3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-     'recipe-app-rxrp.onrender.com'
+     'recipe-app-rxrp.onrender.com',
+     '127.0.0.1'
 ]
 
 
@@ -125,6 +126,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# For production: where all static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Added manually
